@@ -20,287 +20,11 @@
   <!-- Embedded SVG Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Local Fonts -->
+  <link rel="stylesheet" href="./fonts/inter.css" />
 
-  <style>
-    /* =========================================================
-       1. THE FOUNDATION & VARIABLES
-       ========================================================= */
-    :root {
-      --bg-obsidian: #0C0E12;
-      --bg-gunmetal: #12151A;
-      --border-dark: #1C2128;
-      --border-medium: #2D3139;
-      --gold-dust: #C5A267;
-      --gold-hover: #d8b57a;
-      --gold-subtle: #4A4031;
-      --text-main: #E2E8F0;
-      --text-muted: #94A3B8;
-    }
-
-    * { 
-      box-sizing: border-box; 
-      margin: 0; 
-      padding: 0; 
-    }
-
-    body {
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      background-color: var(--bg-obsidian);
-      color: var(--text-main);
-      line-height: 1.6;
-      padding: 3rem 1.5rem;
-    }
-
-    .container {
-      max-width: 950px;
-      margin: 0 auto;
-    }
-
-    /* =========================================================
-       2. TYPOGRAPHY & HEADINGS
-       ========================================================= */
-    h1, h2, h3 {
-      color: var(--gold-dust);
-      font-family: 'Playfair Display', 'Georgia', serif;
-      font-weight: 400;
-      letter-spacing: 0.08em;
-      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-    }
-
-    h1 {
-      font-size: 2.8rem;
-      margin-bottom: 0.6rem;
-    }
-
-    h2 {
-      font-size: 1.6rem;
-      border-bottom: 1px solid var(--border-dark);
-      padding-bottom: 10px;
-      margin-bottom: 1.8rem;
-    }
-
-    p {
-      color: var(--text-main);
-      font-size: 0.98rem;
-    }
-
-    .about-text {
-      color: var(--text-muted);
-      line-height: 1.8;
-    }
-
-    /* =========================================================
-       3. HERO SECTION & BUTTONS
-       ========================================================= */
-    header {
-      margin-bottom: 4rem;
-    }
-
-    .hero-badge {
-      display: inline-block;
-      background: rgba(197, 162, 103, 0.1);
-      color: var(--gold-dust);
-      padding: 0.3rem 0.8rem;
-      border-radius: 2px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      margin-bottom: 1rem;
-      border: 1px solid rgba(197, 162, 103, 0.3);
-    }
-
-    .subtitle {
-      font-size: 1.2rem;
-      color: var(--text-muted);
-      margin-bottom: 1.8rem;
-      max-width: 780px;
-      line-height: 1.7;
-    }
-
-    .links {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    /* Primary Solid Button */
-    .btn-primary {
-      background-color: var(--gold-dust);
-      color: var(--bg-obsidian);
-      border: 1px solid var(--gold-dust);
-      border-radius: 2px;
-      font-size: 0.8rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      padding: 0.65rem 1.5rem;
-      text-decoration: none;
-      box-shadow: 0 4px 15px rgba(197, 162, 103, 0.2);
-      transition: all 0.3s ease;
-    }
-
-    .btn-primary:hover {
-      background-color: var(--gold-hover);
-      box-shadow: 0 4px 20px rgba(197, 162, 103, 0.35);
-    }
-
-    /* Secondary Hollow Button */
-    .btn-secondary {
-      background-color: transparent;
-      color: var(--gold-dust);
-      border: 1px solid var(--border-medium);
-      border-radius: 2px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      padding: 0.65rem 1.5rem;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .btn-secondary:hover {
-      border-color: var(--gold-dust);
-      background-color: rgba(197, 162, 103, 0.08);
-    }
-
-    /* =========================================================
-       4. CARDS & GRID
-       ========================================================= */
-    section {
-      margin-bottom: 4rem;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .card {
-      background-color: var(--bg-gunmetal);
-      border: 1px solid var(--border-dark);
-      border-top: 3px solid var(--gold-dust);
-      border-radius: 4px;
-      padding: 1.8rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: transform 0.3s ease, border-color 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-3px);
-      border-color: var(--border-medium);
-    }
-
-    .card h3 {
-      font-size: 1.25rem;
-      margin-bottom: 0.6rem;
-    }
-
-    .card p {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      margin-bottom: 1.2rem;
-      flex-grow: 1;
-      line-height: 1.6;
-    }
-
-    /* Image formatting inside cards */
-    .card-img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 2px;
-      margin-bottom: 1.2rem;
-      border: 1px solid var(--border-dark);
-      opacity: 0.85;
-      transition: opacity 0.3s ease;
-    }
-
-    .card:hover .card-img {
-      opacity: 1;
-    }
-
-    /* Tech Tags */
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-bottom: 1.2rem;
-    }
-
-    .tag {
-      background: var(--bg-obsidian);
-      color: var(--text-muted);
-      border: 1px solid var(--border-dark);
-      font-size: 0.72rem;
-      padding: 0.2rem 0.6rem;
-      border-radius: 2px;
-      letter-spacing: 0.05em;
-    }
-
-    /* Card Action Button */
-    .card-link {
-      display: inline-block;
-      padding: 8px 16px;
-      border: 1px solid var(--gold-dust);
-      border-radius: 2px;
-      color: var(--gold-dust);
-      font-family: 'Inter', sans-serif;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      text-decoration: none;
-      background-color: transparent;
-      transition: all 0.4s ease-in-out;
-      text-align: center;
-      width: fit-content;
-      margin-top: auto; /* Pushes button to bottom if content heights differ */
-    }
-
-    .card-link:hover {
-      background-color: rgba(197, 162, 103, 0.15);
-      box-shadow: 0 0 15px rgba(197, 162, 103, 0.2);
-      border-color: var(--text-main);
-      color: var(--text-main);
-    }
-
-    /* Tech Stack Group */
-    .stack-group {
-      margin-bottom: 1.4rem;
-    }
-
-    .stack-group-last {
-      margin-bottom: 0;
-    }
-
-    .stack-title {
-      font-family: 'Playfair Display', 'Georgia', serif;
-      font-size: 1.05rem;
-      color: var(--gold-dust);
-      margin-bottom: 0.6rem;
-      letter-spacing: 0.05em;
-    }
-
-    /* =========================================================
-       5. FOOTER
-       ========================================================= */
-    footer {
-      text-align: center;
-      color: var(--text-muted);
-      font-size: 0.85rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--border-dark);
-    }
-  </style>
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -344,7 +68,7 @@
               <span class="tag">LLMs</span>
             </div>
           </div>
-          <a class="card-link" aria-label="Find Your Next Job: The Slate Job Curator" href="https://theslatejobcurator.streamlit.app/" target="_blank" rel="noopener noreferrer" aria-label="Find Your Next Job on The Slate Job Curator">Find Your Next Job →</a>
+          <a class="card-link" aria-label="Find Your Next Job: The Slate Job Curator" href="https://theslatejobcurator.streamlit.app/" target="_blank" rel="noopener noreferrer">Find Your Next Job →</a>
         </div>
 
         <div class="card">
@@ -357,7 +81,7 @@
               <span class="tag">Productivity</span>
             </div>
           </div>
-          <a class="card-link" aria-label="View Extension: Slate Focus" href="https://ruyzambrano.github.io/slate-focus" target="_blank" rel="noopener noreferrer" aria-label="View Slate Focus extension documentation">View Extension →</a>
+          <a class="card-link" aria-label="View Extension: Slate Focus" href="https://ruyzambrano.github.io/slate-focus" target="_blank" rel="noopener noreferrer">View Extension →</a>
         </div>
 
         <div class="card">
@@ -370,7 +94,7 @@
               <span class="tag">Dev Tools</span>
             </div>
           </div>
-          <a class="card-link" aria-label="View Extension: Slate Stack" href="https://ruyzambrano.github.io/slate-stack/" target="_blank" rel="noopener noreferrer" aria-label="View Slate Stack extension documentation">View Extension →</a>
+          <a class="card-link" aria-label="View Extension: Slate Stack" href="https://ruyzambrano.github.io/slate-stack/" target="_blank" rel="noopener noreferrer">View Extension →</a>
         </div>
 
       </div>
@@ -392,7 +116,7 @@
               <span class="tag">AI Orchestration</span>
             </div>
           </div>
-          <a class="card-link" aria-label="View Docs: LLM Catalogue" href="https://ruyzambrano.github.io/llm_catalogue" target="_blank" rel="noopener noreferrer" aria-label="View LLM Catalogue documentation">View Docs →</a>
+          <a class="card-link" aria-label="View Docs: LLM Catalogue" href="https://ruyzambrano.github.io/llm_catalogue" target="_blank" rel="noopener noreferrer">View Docs →</a>
         </div>
 
         <div class="card">
@@ -406,7 +130,7 @@
               <span class="tag">ETL Testing</span>
             </div>
           </div>
-          <a class="card-link" aria-label="View Docs: Complexifier" href="https://ruyzambrano.github.io/complexifier/" target="_blank" rel="noopener noreferrer" aria-label="View Complexifier documentation">View Docs →</a>
+          <a class="card-link" aria-label="View Docs: Complexifier" href="https://ruyzambrano.github.io/complexifier/" target="_blank" rel="noopener noreferrer">View Docs →</a>
         </div>
 
       </div>
@@ -428,7 +152,7 @@
               <span class="tag">Live Performance</span>
             </div>
           </div>
-          <a class="card-link" aria-label="Watch Performance: This has been coming a long time, now" href="https://www.youtube.com/watch?v=R-Hg4UPXeY0&ab_channel=RuyZambrano" target="_blank" rel="noopener noreferrer" aria-label="Watch This has been coming a long time, now on YouTube">Watch Performance →</a>
+          <a class="card-link" aria-label="Watch Performance: This has been coming a long time, now" href="https://www.youtube.com/watch?v=R-Hg4UPXeY0&ab_channel=RuyZambrano" target="_blank" rel="noopener noreferrer">Watch Performance →</a>
         </div>
 
         <div class="card">
@@ -442,7 +166,7 @@
               <span class="tag">Technical Integration</span>
             </div>
           </div>
-          <a class="card-link" aria-label="Watch Performance: We Found It With Each Other" href="https://www.youtube.com/watch?v=uVFoqOnRDgM&ab_channel=RuyZambrano" target="_blank" rel="noopener noreferrer" aria-label="Watch We Found It With Each Other on YouTube">Watch Performance →</a>
+          <a class="card-link" aria-label="Watch Performance: We Found It With Each Other" href="https://www.youtube.com/watch?v=uVFoqOnRDgM&ab_channel=RuyZambrano" target="_blank" rel="noopener noreferrer">Watch Performance →</a>
         </div>
 
       </div>
@@ -489,7 +213,7 @@
       <p>© Ruy Zambrano. Hosted on GitHub Pages.</p>
     </footer>
 
-</main>
+  </main>
 
 </body>
 </html>
