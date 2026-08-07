@@ -2,18 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="google-site-verification" content="nE4Ref02pPSKty3X4piydgQa8BgyRYBustSbcrBnEVI" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ruy Zambrano | Data Engineer & Technical Coach</title>
   
-  <!-- Google Fonts: Playfair Display & Inter -->
+  <!-- Primary Meta Tags -->
+  <title>Ruy Zambrano | Data Engineer & Technical Coach</title>
+  <meta name="title" content="Ruy Zambrano | Data Engineer & Technical Coach" />
+  <meta name="description" content="Data Engineer & Technical Coach with an MSc in CS. Specializing in AWS, LangGraph, Python, Big Data Architecture, and technical mentoring." />
+  <meta name="author" content="Ruy Zambrano" />
+
+  <!-- Open Graph / Social Media Preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ruyzambrano.github.io/" />
+  <meta property="og:title" content="Ruy Zambrano | Data Engineer & Technical Coach" />
+  <meta property="og:description" content="Building scalable data pipelines, AI agent architectures, and empowering software & data engineers." />
+
+  <!-- Embedded SVG Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
     /* =========================================================
-       1. THE FOUNDATION: Deep Charcoal Obsidian & Luxury Palette
+       1. THE FOUNDATION & VARIABLES
        ========================================================= */
     :root {
       --bg-obsidian: #0C0E12;
@@ -21,18 +34,22 @@
       --border-dark: #1C2128;
       --border-medium: #2D3139;
       --gold-dust: #C5A267;
+      --gold-hover: #d8b57a;
       --gold-subtle: #4A4031;
       --text-main: #E2E8F0;
       --text-muted: #94A3B8;
-      --muted: #94A3B8;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * { 
+      box-sizing: border-box; 
+      margin: 0; 
+      padding: 0; 
+    }
 
     body {
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      background-color: var(--bg-obsidian) !important;
-      color: var(--text-main) !important;
+      background-color: var(--bg-obsidian);
+      color: var(--text-main);
       line-height: 1.6;
       padding: 3rem 1.5rem;
     }
@@ -43,13 +60,13 @@
     }
 
     /* =========================================================
-       2. TYPOGRAPHY & HEADINGS (Brushed Metallic Champagne)
+       2. TYPOGRAPHY & HEADINGS
        ========================================================= */
     h1, h2, h3 {
-      color: var(--gold-dust) !important;
-      font-family: 'Playfair Display', 'Georgia', serif !important;
-      font-weight: 400 !important;
-      letter-spacing: 0.08em !important;
+      color: var(--gold-dust);
+      font-family: 'Playfair Display', 'Georgia', serif;
+      font-weight: 400;
+      letter-spacing: 0.08em;
       text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
     }
 
@@ -70,8 +87,13 @@
       font-size: 0.98rem;
     }
 
+    .about-text {
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+
     /* =========================================================
-       3. HEADER & HERO SECTION
+       3. HERO SECTION & BUTTONS
        ========================================================= */
     header {
       margin-bottom: 4rem;
@@ -99,14 +121,35 @@
       line-height: 1.7;
     }
 
-    /* Buttons: Primary (Solid Gold) vs Secondary (Hollow Bronze/Gold) */
     .links {
       display: flex;
       gap: 1rem;
       flex-wrap: wrap;
     }
 
-    .links a {
+    /* Primary Solid Button */
+    .btn-primary {
+      background-color: var(--gold-dust);
+      color: var(--bg-obsidian);
+      border: 1px solid var(--gold-dust);
+      border-radius: 2px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 0.65rem 1.5rem;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(197, 162, 103, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--gold-hover);
+      box-shadow: 0 4px 20px rgba(197, 162, 103, 0.35);
+    }
+
+    /* Secondary Hollow Button */
+    .btn-secondary {
       background-color: transparent;
       color: var(--gold-dust);
       border: 1px solid var(--border-medium);
@@ -120,26 +163,13 @@
       transition: all 0.3s ease;
     }
 
-    .links a:first-child {
-      background-color: var(--gold-dust);
-      color: var(--bg-obsidian);
-      border-color: var(--gold-dust);
-      font-weight: 700;
-      box-shadow: 0 4px 15px rgba(197, 162, 103, 0.2);
-    }
-
-    .links a:first-child:hover {
-      background-color: #d8b57a;
-      box-shadow: 0 4px 20px rgba(197, 162, 103, 0.35);
-    }
-
-    .links a:not(:first-child):hover {
+    .btn-secondary:hover {
       border-color: var(--gold-dust);
       background-color: rgba(197, 162, 103, 0.08);
     }
 
     /* =========================================================
-       4. CARDS (Minimalist Slate with Gold Top Accent)
+       4. CARDS & GRID
        ========================================================= */
     section {
       margin-bottom: 4rem;
@@ -152,10 +182,10 @@
     }
 
     .card {
-      background-color: var(--bg-gunmetal) !important;
-      border: 1px solid var(--border-dark) !important;
-      border-top: 3px solid var(--gold-dust) !important;
-      border-radius: 4px !important;
+      background-color: var(--bg-gunmetal);
+      border: 1px solid var(--border-dark);
+      border-top: 3px solid var(--gold-dust);
+      border-radius: 4px;
       padding: 1.8rem;
       display: flex;
       flex-direction: column;
@@ -165,15 +195,12 @@
 
     .card:hover {
       transform: translateY(-3px);
-      border-color: var(--border-medium) !important;
-      border-top-color: var(--gold-dust) !important;
+      border-color: var(--border-medium);
     }
 
     .card h3 {
       font-size: 1.25rem;
       margin-bottom: 0.6rem;
-      border-bottom: none;
-      padding-bottom: 0;
     }
 
     .card p {
@@ -184,7 +211,23 @@
       line-height: 1.6;
     }
 
-    /* Badges / Tech Tags */
+    /* Image formatting inside cards */
+    .card-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 2px;
+      margin-bottom: 1.2rem;
+      border: 1px solid var(--border-dark);
+      opacity: 0.85;
+      transition: opacity 0.3s ease;
+    }
+
+    .card:hover .card-img {
+      opacity: 1;
+    }
+
+    /* Tech Tags */
     .tags {
       display: flex;
       flex-wrap: wrap;
@@ -202,35 +245,40 @@
       letter-spacing: 0.05em;
     }
 
-    /* Action Links within Cards */
+    /* Card Action Button */
     .card-link {
       display: inline-block;
       padding: 8px 16px;
-      border: 1px solid var(--gold-dust) !important;
-      border-radius: 2px !important;
-      color: var(--gold-dust) !important;
-      font-family: 'Inter', sans-serif !important;
-      font-size: 11px !important;
-      font-weight: 600 !important;
-      letter-spacing: 0.12em !important;
-      text-transform: uppercase !important;
-      text-decoration: none !important;
-      background-color: transparent !important;
-      transition: all 0.4s ease-in-out !important;
+      border: 1px solid var(--gold-dust);
+      border-radius: 2px;
+      color: var(--gold-dust);
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      background-color: transparent;
+      transition: all 0.4s ease-in-out;
       text-align: center;
       width: fit-content;
+      margin-top: auto; /* Pushes button to bottom if content heights differ */
     }
 
     .card-link:hover {
-      background-color: rgba(197, 162, 103, 0.15) !important;
-      box-shadow: 0 0 15px rgba(197, 162, 103, 0.2) !important;
-      border-color: var(--text-main) !important;
-      color: var(--text-main) !important;
+      background-color: rgba(197, 162, 103, 0.15);
+      box-shadow: 0 0 15px rgba(197, 162, 103, 0.2);
+      border-color: var(--text-main);
+      color: var(--text-main);
     }
 
-    /* Stack Group Formatting */
+    /* Tech Stack Group */
     .stack-group {
       margin-bottom: 1.4rem;
+    }
+
+    .stack-group-last {
+      margin-bottom: 0;
     }
 
     .stack-title {
@@ -242,21 +290,13 @@
     }
 
     /* =========================================================
-       5. DIVIDERS & FOOTER
+       5. FOOTER
        ========================================================= */
-    hr {
-      border: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--gold-subtle), transparent) !important;
-      opacity: 0.5;
-      margin: 3rem 0;
-    }
-
     footer {
       text-align: center;
       color: var(--text-muted);
       font-size: 0.85rem;
-      padding-top: 1rem;
+      padding-top: 1.5rem;
       border-top: 1px solid var(--border-dark);
     }
   </style>
@@ -273,23 +313,23 @@
         Building scalable data pipelines, AI agent architectures, and empowering the next generation of software & data engineers.
       </p>
       <div class="links">
-        <a href="https://github.com/Ruyzambrano" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/ruv-zambrano/" target="_blank">LinkedIn</a>
-        <a href="mailto:Ruyzambrano@gmail.com">Email Me</a>
+        <a class="btn-primary" href="https://github.com/Ruyzambrano" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="btn-secondary" href="https://www.linkedin.com/in/ruv-zambrano/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a class="btn-secondary" href="mailto:Ruyzambrano@gmail.com">Email Me</a>
       </div>
     </header>
 
     <!-- About Section -->
     <section>
       <h2>About Me</h2>
-      <p style="color: var(--muted); line-height: 1.8;">
+      <p class="about-text">
         With an <strong>MSc in Computer Science</strong> from the University of York, I bridge complex cloud & big data engineering with hands-on coaching. I specialize in <strong>Python, SQL, AWS, and LLM Orchestration (LangGraph)</strong>. To date, I've mentored over 100+ engineers from FTSE 100 companies while designing data pipelines, open-source utilities, and AI productivity tools.
       </p>
     </section>
 
     <!-- The Slate Suite -->
     <section>
-      <h2>⚡ The "Slate" Tool Suite</h2>
+      <h2><span aria-hidden="true">⚡</span> The "Slate" Tool Suite</h2>
       <div class="grid">
         
         <div class="card">
@@ -303,7 +343,7 @@
               <span class="tag">LLMs</span>
             </div>
           </div>
-          <a class="card-link" href="https://theslatejobcurator.streamlit.app/" target="_blank">Find Your Next Job →</a>
+          <a class="card-link" href="https://theslatejobcurator.streamlit.app/" target="_blank" rel="noopener noreferrer" aria-label="Find Your Next Job on The Slate Job Curator">Find Your Next Job →</a>
         </div>
 
         <div class="card">
@@ -316,7 +356,7 @@
               <span class="tag">Productivity</span>
             </div>
           </div>
-          <a class="card-link" href="https://ruyzambrano.github.io/slate-focus" target="_blank">View Extension →</a>
+          <a class="card-link" href="https://ruyzambrano.github.io/slate-focus" target="_blank" rel="noopener noreferrer" aria-label="View Slate Focus extension documentation">View Extension →</a>
         </div>
 
         <div class="card">
@@ -329,28 +369,29 @@
               <span class="tag">Dev Tools</span>
             </div>
           </div>
-          <a class="card-link" href="https://ruyzambrano.github.io/slate-stack/" target="_blank">View Extension →</a>
+          <a class="card-link" href="https://ruyzambrano.github.io/slate-stack/" target="_blank" rel="noopener noreferrer" aria-label="View Slate Stack extension documentation">View Extension →</a>
         </div>
 
       </div>
     </section>
 
-    <!-- Open Source & Python -->
+    <!-- Open Source & Libraries -->
     <section>
-      <h2>📦 Open Source & Libraries</h2>
+      <h2><span aria-hidden="true">📦</span> Open Source & Libraries</h2>
       <div class="grid">
+        
         <div class="card">
-        <div>
+          <div>
             <h3>LLM Catalogue</h3>
             <p>A curated resource and interactive framework for tracking, evaluating, and benchmarking open-source and enterprise Large Language Models.</p>
             <div class="tags">
-            <span class="tag">Python</span>
-            <span class="tag">LLMs</span>
-            <span class="tag">Model Evaluation</span>
-            <span class="tag">AI Orchestration</span>
+              <span class="tag">Python</span>
+              <span class="tag">LLMs</span>
+              <span class="tag">Model Evaluation</span>
+              <span class="tag">AI Orchestration</span>
             </div>
-        </div>
-        <a class="card-link" href="https://ruyzambrano.github.io/llm_catalogue" target="_blank">View Docs →</a>
+          </div>
+          <a class="card-link" href="https://ruyzambrano.github.io/llm_catalogue" target="_blank" rel="noopener noreferrer" aria-label="View LLM Catalogue documentation">View Docs →</a>
         </div>
 
         <div class="card">
@@ -364,7 +405,43 @@
               <span class="tag">ETL Testing</span>
             </div>
           </div>
-          <a class="card-link" href="https://ruyzambrano.github.io/complexifier/" target="_blank">View Docs →</a>
+          <a class="card-link" href="https://ruyzambrano.github.io/complexifier/" target="_blank" rel="noopener noreferrer" aria-label="View Complexifier documentation">View Docs →</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Creative Technology & Performance -->
+    <section>
+      <h2><span aria-hidden="true">🎭</span> Creative Technology & Performance</h2>
+      <div class="grid">
+        
+        <div class="card">
+          <div>
+            <img src="https://user-images.githubusercontent.com/111122180/217793952-3023eeb0-67ed-49be-b3cf-1bfce718d14d.JPG" alt="This has been coming a long time, now - Performance Still" class="card-img" />
+            <h3>This has been coming a long time, now</h3>
+            <p>This performance uses manipulated video of the dancer to create a monstrous digital double. Based on research into Victorian Gothic horror, the piece integrates themes of the uncanny through technological ambiguity—utilizing dim lights, localized sound, and projection mapping onto the dancer's skin.</p>
+            <div class="tags">
+              <span class="tag">Projection Mapping</span>
+              <span class="tag">Video Manipulation</span>
+              <span class="tag">Live Performance</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.youtube.com/watch?v=R-Hg4UPXeY0&ab_channel=RuyZambrano" target="_blank" rel="noopener noreferrer" aria-label="Watch This has been coming a long time, now on YouTube">Watch Performance →</a>
+        </div>
+
+        <div class="card">
+          <div>
+            <img src="https://user-images.githubusercontent.com/111122180/217792814-4d6f5ac4-788c-4fd0-8c2a-0f34b98acbcc.png" alt="We Found It With Each Other - Performance Still" class="card-img" />
+            <h3>We Found It With Each Other</h3>
+            <p>Developed as part of an undergraduate thesis, this performance leverages technology to algorithmically segment choreography into distinct chunks. Tech is heavily integrated to track timing, automate lighting/audio cues, and generate real-time visual projections that highlight specific movement pathways.</p>
+            <div class="tags">
+              <span class="tag">Show Control</span>
+              <span class="tag">A/V Cueing</span>
+              <span class="tag">Technical Integration</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.youtube.com/watch?v=uVFoqOnRDgM&ab_channel=RuyZambrano" target="_blank" rel="noopener noreferrer" aria-label="Watch We Found It With Each Other on YouTube">Watch Performance →</a>
         </div>
 
       </div>
@@ -372,7 +449,7 @@
 
     <!-- Tech Stack Summary -->
     <section>
-      <h2>🛠 Tech Stack & Core Skills</h2>
+      <h2><span aria-hidden="true">🛠</span> Tech Stack & Core Skills</h2>
       <div class="card">
         <div class="stack-group">
           <div class="stack-title">Languages & Frameworks</div>
@@ -395,7 +472,7 @@
             <span class="tag">Docker</span>
           </div>
         </div>
-        <div class="stack-group" style="margin-bottom: 0;">
+        <div class="stack-group stack-group-last">
           <div class="stack-title">AI & Ecosystem</div>
           <div class="tags">
             <span class="tag">LangChain / LangGraph</span>
