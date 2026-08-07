@@ -154,12 +154,13 @@ header {
   letter-spacing: 1px;
   padding: 0.65rem 1.5rem;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 
 .btn-secondary:hover {
   border-color: var(--gold-dust);
   background-color: rgba(197, 162, 103, 0.08);
+  box-shadow: 0 1px 15px rgba(197, 162, 103, 0.35);
 }
 
 /* =========================================================
