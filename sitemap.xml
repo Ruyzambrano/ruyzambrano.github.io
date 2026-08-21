@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">  
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Main Portfolio Landing Page -->
   <url>
     <loc>https://ruyzambrano.github.io/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.00</priority>
-  </url>
-  <!-- The Slate Job Curator -->
-  <url>
-    <loc>https://ruyzambrano.github.io/the-slate-job-curator/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
   </url>
   <!-- Slate Focus -->
   <url>
@@ -33,12 +27,6 @@
   <!-- Complexifier Documentation -->
   <url>
     <loc>https://ruyzambrano.github.io/complexifier/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-    <!-- LLM Catalogue Documentation -->
-  <url>
-    <loc>https://ruyzambrano.github.io/llm_catalogue/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
