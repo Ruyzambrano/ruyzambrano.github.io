@@ -222,6 +222,11 @@ section {
   opacity: 1;
 }
 
+.card-featured .card-img {
+  height: auto;
+  aspect-ratio: 8 / 3;
+}
+
 /* Tech Tags */
 .tags {
   display: flex;
