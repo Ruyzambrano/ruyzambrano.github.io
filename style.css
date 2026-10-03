@@ -223,8 +223,9 @@ section {
 }
 
 .card-featured .card-img {
+  display: block;
   height: auto;
-  aspect-ratio: 8 / 3;
+  aspect-ratio: 1600 / 602;
 }
 
 /* Tech Tags */

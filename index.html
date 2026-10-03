@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="./fonts/inter.css" />
 
   <!-- External Stylesheet -->
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=2" />
   
   <!-- Sitemap Autodiscovery -->
 <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
@@ -60,7 +60,7 @@
       <h2>Featured</h2>
       <div class="card card-featured">
         <div>
-          <img src="./assets/no_persistent_state.webp" alt="Coloured curved strokes drawing and fading on a black canvas" class="card-img" />
+          <video class="card-img" src="./assets/no_persistent_state.mp4" poster="./assets/no_persistent_state_poster.jpg" width="1600" height="602" autoplay muted loop playsinline aria-label="Coloured curved strokes drawing and fading on a black canvas"></video>
           <h3>No Persistent State</h3>
           <p>A live visualisation of the internet's routing system. Each stroke is a real BGP route announcement streamed from RIPE NCC's RIS Live, drawn as a curve through the networks it passed and left to fade. Built in vanilla JavaScript with a self-healing WebSocket client, Canvas 2D and generative Web Audio, backed by unit tests and CI.</p>
           <div class="tags">
